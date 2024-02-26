@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+</head>
+<body>
+ <style>
+    #data div{
+        margin: 20px;
+        text-align: center;
+        
+    }
+    #data div p{
+          color: rgb(188, 164, 211);
+          font-weight: 800;
+          font-size: 20px;
+         
+    }
+    #data div img{
+        height: 200px;
+        width: 200px;
+    }
+    .title{
+       background-color: rgb(201, 185, 216);
+       border-radius: 20px;
+    }
+    #data{
+        
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+ </style>
+
+
+    <form id="form">
+      <input type="text" placeholder="title" id="title" required> <br><br>
+      <input type="url" placeholder="img" id="img" required> <br><br>
+      <input type="number" placeholder="price" id="price" required  > <br><br>
+      <input type="submit">
+    </form>
+    <div id="data">
+
+    </div>
+</body>
+<script src="./index.js"></script>
+</html>
