@@ -12,8 +12,18 @@ const show = () => {
       let price = document.createElement("p")
       price.innerHTML=products[i].price
      
+      let del=document.createElement("button")
+      del.innerHTML="DELETE"
+      del.addEventListener("click",()=>{
+        products.splice(i,1)
+        // console.log(i)
+        show();
+
+      })
+
+
       let div=document.createElement("div")
-      div.append(img,title,price)
+      div.append(img,title,price,del)
       title.setAttribute("class","title")
       document.getElementById("data").append(div)
 
