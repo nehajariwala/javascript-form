@@ -40,8 +40,26 @@ const formdata = (e) => {
  let title=document.getElementById("title").value
  let img=document.getElementById("img").value
  let price=document.getElementById("price").value
+ let password=document.getElementById("password").value
 
+  if( title.length<2){
+    alert("please enter valid title")
+    document.getElementById("t-error").innerHTML="please enter valid title"
+    document.getElementById("t-error").style.color="red"
+    return
+  }
  
+  if(price<0){
+    alert("please enter valid price")
+    return
+  }
+ 
+  if(password.length<6){
+    alert("must be 6 character in password")
+    return
+  }
+
+
 
 let product={
     title:title,
